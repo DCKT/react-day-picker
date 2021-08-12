@@ -1,6 +1,6 @@
 {
   "name": "@colisweb/react-day-picker",
-  "version": "7.4.11",
+  "version": "7.4.12",
   "description": "Flexible date picker component for React",
   "browser": "lib/react-day-picker.min.js",
   "main": "build/index.js",
@@ -27,8 +27,8 @@
     "coverage": "jest --coverage",
     "prepublishOnly": "yarn build",
     "prebuild": "rimraf lib umd build",
-    "build": "yarn build:src && yarn build:umd",
-    "build:src": "babel ./src -d ./build --source-maps && yarn build:css",
+    "build": "yarn build:src",
+    "build:src": "babel ./src -d ./build  && yarn build:css",
     "build:umd": "cross-env NODE_ENV=production webpack -p",
     "build:css": "postcss src/style.css --use autoprefixer -d lib/ --no-map"
   },
@@ -58,20 +58,12 @@
     "react": "~0.13.x || ~0.14.x || ^15.0.0 || ^16.0.0 || ^17.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "7.14.8",
+    "@babel/core": "7.15.0",
+    "@babel/plugin-proposal-export-default-from": "^7.14.5",
+    "@babel/preset-env": "7.15.0",
     "@types/react": "^16.9.2",
     "autoprefixer": "^8.4.1",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.6",
-    "babel-jest": "^23.4.2",
-    "babel-loader": "^7.1.5",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-export-extensions": "^6.22.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-1": "^6.24.1",
     "cheerio": "^1.0.0-rc.2",
     "codecov": "^3.0.4",
     "cross-env": "^5.2.0",
@@ -102,6 +94,7 @@
     "webpack": "^3.10.0"
   },
   "dependencies": {
+    "@babel/preset-react": "^7.14.5",
     "prop-types": "^15.6.2"
   }
 }

@@ -1,15 +1,13 @@
 {
-  "presets": ["react", "env"],
-  "plugins": [
-    "transform-export-extensions",
-    "transform-class-properties",
-    "transform-object-rest-spread",
+  "presets": [
+    ["@babel/preset-react"],
     [
-      "transform-react-remove-prop-types",
+      "@babel/preset-env",
       {
-        "removeImport": true,
-      },
-    ],
-    
-  ]
+        "useBuiltIns": "usage",
+        "corejs": 3
+      }
+    ]
+  ],
+  "plugins": ["@babel/plugin-proposal-export-default-from"]
 }
