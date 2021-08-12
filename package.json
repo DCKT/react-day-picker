@@ -30,7 +30,8 @@
     "build": "yarn build:src",
     "build:src": "babel ./src -d ./build  && yarn build:css",
     "build:umd": "cross-env NODE_ENV=production webpack -p",
-    "build:css": "postcss src/style.css --use autoprefixer -d lib/ --no-map"
+    "build:css": "postcss src/style.css --use autoprefixer -d lib/ --no-map",
+    "postinstall": "yarn build"
   },
   "repository": {
     "type": "git",
