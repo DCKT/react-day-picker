@@ -1,6 +1,6 @@
 {
   "name": "@colisweb/react-day-picker",
-  "version": "7.4.10",
+  "version": "7.4.11",
   "description": "Flexible date picker component for React",
   "browser": "lib/react-day-picker.min.js",
   "main": "build/index.js",
